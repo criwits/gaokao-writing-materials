@@ -1,0 +1,23 @@
+\documentclass[punct=kaiming,a4paper]{ctexbook} % 为了使得版面紧凑，启用标点压缩。
+\usepackage[vmargin=0.9in, inner=1.25in, outer=0.95in]{geometry}
+\usepackage{graphicx}
+\xeCJKsetwidth{。？！}{1em} % 调整句末符号的宽度。 
+% 定义一个用来写人物例子的命令。
+\newcommand{\rw}[2]
+{\subsubsection{#1}
+#2}
+% 定义一个用来写句子出处的命令。
+\newcommand{\by}[1]
+{\hfill——#1}
+% 开始正文发排
+\begin{document}
+\pagestyle{plain}
+\input{titlepage}
+\mainmatter
+% 四部分内容分别写在其他四个.tex文件里面。
+\input{chapter-1}
+\input{chapter-2}
+\input{chapter-3}
+\input{chapter-4}
+
+\end{document}
